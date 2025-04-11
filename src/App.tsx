@@ -1,40 +1,79 @@
 import './App.css';
 import styled from 'styled-components';
+import img from './img.jpg';
 
 
 function App() {
     return (
         <div className="App">
-            <Title>Styled-components <span>.attrs</span> method</Title>
-
-            <Form>
-                <Field/>
-                <Field/>
-                <Field/>
-            </Form>
+            <Card>
+                <Photo/>
+                <Label>Headline</Label>
+                <Text>Faucibus. Faucibus. Sit sit sapien sit tempusrisu ut. Sit molestie ornare in venen.</Text>
+                <Button1>See more</Button1>
+                <Button2>Save</Button2>
+            </Card>
         </div>
     );
 }
 
 export default App;
 
-const Title = styled.h1`
-    font-size: 1.5em;
+const Card = styled.div`
+    width: 300px;
+    height: 350px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px 5px rgba(0, 0, 0, 0.1);    
+`;
+
+const Photo = styled.div`
+    width: 280px;
+    height: 170px;
+    border-radius: 10px;
+    margin: 10px;
+    background-size: cover;
+    background-image: url('${img}');
+    
+`;
+
+const Label = styled.h2`
+    font-weight: 700;
+    font-size: 16px;
+    margin-left: 20px;
+    margin-top: 20px;
+`;
+
+const Text = styled.p`
+    font-weight: 500;
+    font-size: 12px;
+    color: #ABB3BA;
+    line-height: 20px;
+    margin: 20px;
+`;
+
+const Button1 = styled.button`
+    font-weight: 700;
+    font-size: 10px;
+    background: #4E71FE;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    width: 86px;
+    height: 30px;
     text-align: center;
-    margin-bottom: 32px;
-    span {
-        color: #e91e63;
-    }
+    margin-left: 20px;
 `;
 
-const Form = styled.form`
-  width: 100%;
-  max-width: 500px;
-`;
-
-const Field = styled.input`
-  padding: 5px 15px;
-  margin: 10px 0;
-  width: 100%;
-  font-size: 1rem;
+const Button2 = styled.button`
+    font-weight: 700;
+    font-size: 10px;
+    border: 2px solid #4E71FE;
+    color: #4E71FE;
+    background: white;
+    border-radius: 5px;
+    width: 86px;
+    height: 30px;
+    text-align: center;
+    margin-left: 10px;
 `;
